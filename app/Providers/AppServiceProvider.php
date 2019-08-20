@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+//
     }
 
     /**
@@ -23,8 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-            if($this->app->environment() !== 'production') {
-                $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-            }
+        if($this->app->environment() !== 'production') {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            $this->app->singleton(\Faker\Generator::class, function () {
+                return \Faker\Factory::create('pt_BR');
+            });
+        }
     }
 }
