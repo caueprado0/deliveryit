@@ -23,5 +23,6 @@ Route::group(['middleware' => 'auth:api'], function () {
     });
 
     Route::get('/corredores-provas', 'CorredoresProvas@index');
+    Route::get('/resultado-provas', 'ResultadoCorredores@index');
 
 });

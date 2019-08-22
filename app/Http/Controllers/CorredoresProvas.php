@@ -10,7 +10,7 @@ class CorredoresProvas extends Controller
     use \CPrado\Http\Controllers\ApiControllerTrait;
 
     protected $model;
-      protected $relationships = ['corredores', 'provas'];
+    protected $relationships = ['corredores', 'provas'];
 
     public function __construct(CorredorProva $model)
     {
