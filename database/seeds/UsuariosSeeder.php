@@ -19,7 +19,7 @@ class UsuariosSeeder extends Seeder
                 ->insert([
                     'corredores_id' => $corredor->id,
                     'email' => $faker->email,
-                    'password' => bcrypt('secret'),
+                    'password' => bcrypt('caue'),
                     'created_at' => \Carbon\Carbon::now(),
                     'updated_at' => \Carbon\Carbon::now(),
                 ]);
